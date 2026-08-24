@@ -160,6 +160,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { API } from "../config";
 
 export default function FestivalOffers() {
 
@@ -205,7 +206,7 @@ export default function FestivalOffers() {
   // ✅ FETCH FESTIVAL PRODUCTS
   useEffect(() => {
 
-    fetch("http://127.0.0.1:8000/api/products/festival-offers/")
+    fetch(`${API}/products/festival-offers/`)
       .then((res) => res.json())
       .then((data) => {
 

@@ -128,6 +128,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { API } from "../config";
 
 export default function PopularProducts() {
 
@@ -139,7 +140,7 @@ export default function PopularProducts() {
   // ✅ FETCH POPULAR PRODUCTS
   useEffect(() => {
 
-    fetch("http://127.0.0.1:8000/api/products/popular/")
+    fetch(`${API}/products/popular/`)
       .then((res) => res.json())
       .then((data) => {
 

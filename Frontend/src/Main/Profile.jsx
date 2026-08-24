@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { User, Lock } from "lucide-react";
+import { API } from "../config";
 
 export default function Profile() {
 
@@ -41,7 +42,7 @@ export default function Profile() {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/customers/profile/",
+        `${API}/customers/profile/`,
         {
           method: "GET",
 
@@ -94,7 +95,7 @@ export default function Profile() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/customers/profile/",
+        `${API}/customers/profile/`,
         {
           method: "PUT",
 
@@ -169,7 +170,7 @@ export default function Profile() {
       setPasswordLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/customers/change-password/",
+        `${API}/customers/change-password/`,
         {
           method: "POST",
 

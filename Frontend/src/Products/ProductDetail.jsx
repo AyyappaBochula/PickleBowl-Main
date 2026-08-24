@@ -322,7 +322,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://127.0.0.1:8000/api";
+import { API } from "../config";
 
 export default function ProductDetail() {
 

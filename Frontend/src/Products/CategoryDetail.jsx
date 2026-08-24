@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { API } from "../config";
 
 export default function CategoryDetail() {
 
@@ -19,7 +20,7 @@ export default function CategoryDetail() {
   // ✅ FETCH CATEGORIES
   useEffect(() => {
 
-    fetch("http://127.0.0.1:8000/api/products/categories/")
+    fetch(`${API}/products/categories/`)
       .then((res) => res.json())
       .then((data) => {
 
@@ -36,7 +37,7 @@ export default function CategoryDetail() {
   // ✅ FETCH PRODUCTS
   useEffect(() => {
 
-    fetch("http://127.0.0.1:8000/api/products/")
+    fetch(`${API}/products/`)
       .then((res) => res.json())
       .then((data) => {
 

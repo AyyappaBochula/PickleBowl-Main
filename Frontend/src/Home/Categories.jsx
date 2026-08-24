@@ -247,6 +247,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { API } from "../config";
 
 export default function Categories() {
 
@@ -257,8 +258,7 @@ export default function Categories() {
   // FETCH CATEGORIES
   useEffect(() => {
 
-    fetch("http://127.0.0.1:8000/api/products/categories/")
-    // fetch("https://uncolored-spousal-depraved.ngrok-free.dev/api/products/categories/")
+    fetch(`${API}/products/categories/`)
       .then((res) => res.json())
       .then((data) => {
 

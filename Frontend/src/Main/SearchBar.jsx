@@ -2,8 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Search, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
-const API = "http://localhost:8000/api";
+import { API, API_BASE_URL } from "../config";
 
 export default function SearchBar({ closeSearch }) {
 
@@ -97,7 +96,7 @@ export default function SearchBar({ closeSearch }) {
               >
 
                 <img
-                  src={`http://localhost:8000${product.image}`}
+                  src={product.image?.startsWith('http') ? product.image : `${API_BASE_URL}${product.image}`}
                   alt={product.name}
                   className="w-16 h-16 rounded-lg object-cover"
                 />

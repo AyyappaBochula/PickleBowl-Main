@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API } from "../config";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ export default function Login() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/customers/login/",
+        `${API}/customers/login/`,
         {
           method: "POST",
 

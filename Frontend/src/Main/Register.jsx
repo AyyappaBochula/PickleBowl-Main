@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API } from "../config";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -67,7 +68,7 @@ export default function Register() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/customers/register/",
+        `${API}/customers/register/`,
         {
           method: "POST",
 

@@ -489,7 +489,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Trash2, Plus, Minus, ShoppingCart } from "lucide-react";
 
-const API = "http://localhost:8000/api";
+import { API } from "../config";
 
 export default function Cart() {
 
